@@ -1,7 +1,7 @@
 import fastf1
 import csv
 
-session = fastf1.get_session(2024, '2024 Bahrain Race', 'Q')
+session = fastf1.get_session(2024, '2024 Bahrain Race', 'R')
 session.load()
 data = session.laps
 alb = data[data['DriverNumber'] == '23']
