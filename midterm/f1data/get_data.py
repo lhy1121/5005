@@ -2,7 +2,7 @@ import fastf1
 import csv
 
 session = fastf1.get_session(2024, '2024 Bahrain Race', 'R')
-session.load()
+session.load(telemetry = True)
 data = session.laps
 alb = data[data['DriverNumber'] == '23']
 sar = data[data['DriverNumber'] == '2']
