@@ -4,6 +4,7 @@ from datetime import datetime
 
 alb_r = pd.read_csv('ALB_R.csv')
 time = alb_r[['PitInTime','PitOutTime']]
+res = []
 for i in range(len(time['PitInTime'])):
     if type(time['PitInTime'][i]) == str:
         s1 = time['PitInTime'][i]
@@ -23,4 +24,6 @@ for i in range(len(time['PitInTime'])):
         d2 = time2 - time1
         time_string = str(d2)
         time_arr = time_string.split(":")
-        print(float(time_arr[2]) + d1)
+        result = float(time_arr[2]) + d1
+        res.append(result)
+        print(result)
